@@ -12,12 +12,12 @@ const Tablero = () => {
     let newState = game;
     newState[position] = player;
     setGame(newState);
-    if (player === "X") {
-      setPlayer("O");
-    } else {
-      setPlayer("X");
-    }
 
+    if(player==='X'){
+      setPlayer('O')
+    }else{
+      setPlayer('X')
+    }
   };
 
   const handleStatus = () =>{

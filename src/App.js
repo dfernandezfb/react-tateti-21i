@@ -1,13 +1,25 @@
 import './App.css';
-import CommentForm from './Components/CommentForm/CommentForm';
+import ComplainceForm from './Components/CommentForm/ComplainceForm';
 import Tablero from './Components/Tablero/Tablero';
+import 'bootstrap/dist/css/bootstrap.css';
+import {Container, Row, Col} from 'react-bootstrap'
+import shortid from 'shortid';
 
 function App() {
   return (
-    <>
-    <Tablero/>
-    <CommentForm/>
-    </>
+    <Container>
+      <Row >
+        <Col>
+          <Tablero/>
+        </Col>
+        <Col>
+          <ComplainceForm/>
+        </Col>
+        <Col>
+          {shortid.generate()}
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
